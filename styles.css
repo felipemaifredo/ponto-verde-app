@@ -39,6 +39,107 @@ nav {
     }
 }
 
+#hero {
+    height: 70vh;
+    background: linear-gradient(300deg, rgba(106, 193, 21, 1) 0%, rgba(0, 114, 51, 1) 15%, rgba(4, 117, 50, 1) 85%, rgba(106, 193, 21, 1) 100%);
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    &>.hero_container {
+        margin-top: -10%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &>div {
+            min-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            &>h1 {
+                font-weight: normal;
+                font-size: 65px;
+                color: #fff;
+            }
+
+            &>p {
+                color: #fff;
+                font-size: 23.5px;
+            }
+
+            &>a {
+                margin-top: 35px;
+                padding: 10px 35px;
+                background-color: #fff;
+                text-decoration: none;
+                color: #007233;
+                font-weight: 600;
+                border-radius: 20px;
+                font-size: 1.1rem;
+            }
+        }
+
+        &>img {
+            margin-left: -320px;
+            margin-top: 400px;
+           
+            object-fit: cover;
+            object-position: right;
+        }
+    }
+
+    & > .toast_1 {
+        position: absolute;
+        bottom: 10px;
+        left: 50px;
+        animation: float 5s ease-in-out infinite, tilt 5s ease-in-out infinite;
+    }
+
+    & > .toast_2{
+        position: absolute;
+        bottom: 10%;
+        left: 45%;
+        animation: float 5s ease-in-out infinite, tilt 5s ease-in-out infinite;
+    }
+
+    & > .toast_3{
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        animation: float 5s ease-in-out infinite, tilt 5s ease-in-out infinite;
+    }
+}
+
+  /* Animação de flutuação */
+  @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animação de inclinação */
+@keyframes tilt {
+    0%, 100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: rotateX(10deg) rotateY(5deg);
+    }
+    50% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    75% {
+        transform: rotateX(-10deg) rotateY(-5deg);
+    }
+}
+
 #services {
     padding: 100px 0;
     display: flex;
@@ -110,7 +211,7 @@ nav {
     align-items: center;
     justify-content: center;
 
-    & > div {
+    &>div {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
